@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html style="font-family: 'JetBrains Mono', monospace;">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <base target="_blank">
+    </head>
+    <header style="background-color: #111111; color : #EEEEEE;">
+        <div style="display: flex; justify-content: center; padding-top: 1%;">
+            <h1>Tuatarian.app</h1>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin: 0% 32%;">
+                <p style="text-align: center; flex: 1;"><a href="tuatarian.itch.io">Itch</a></p>
+                <p style="text-align: center; flex: 1;"><a href="#">Articles</a></p>
+                <p style="text-align: center; flex: 1;"><a href="#">About</a></p>
+                <p style="text-align: center; flex: 1;"><a href="#">Links</a></p>
+        </div>
+    </header>   
+    <body style="background-color: #111111; color: #EEEEEE;">
+        <div style="padding: 0rem 12rem;">
+            <div style="padding: 0rem 3rem; background-color: #222222;">
+            <h2 style="text-align: center; padding-top: 2%;">Some Puzzling Pictures</h2>
+            <div style="padding: 2rem 25rem;">
+                <div style="display: flex; justify-content: center;"><img style="height: 200%; width: 200%; object-fit: cover;" src="https://img.itch.zone/aW1nLzYyMDQ4MDMucG5n/original/TFkiMI.png"/></div>
+                <p style="text-align: center; font-size: 100%;">A screenshot of the first puzzle. <a href="https://tuatarian.itch.io/puzzling-images"><i>Some Puzzling Pictures</i></a></p>
+            </div>
+
+            <p>I think this is a clever idea, personally, and am very happy with the execution. Raylib made this very straightforward and easy for me, I think this would have taken more effort for me to make in a proper game engine than it has to make it in raylib. The image is a single texture - the way I'm partitioning it and drawing partitions is that I'm storing a Rectangle which I'm using as the sourcerec in DrawTexturePro(). When I split the image, I'm not doing anything other than generating an array of sourcerecs, which I then randomize. I render this gridded, but instead of putting each rectangle where it should be, I place it based on its position in the array. Then I redraw parts of the texture for every square on the grid, allowing me to extend this system for almost any picture. The rest of the game-creation process was trying to find suitably interesting images of good difficulty, audio, etc. The game is playable <a href="https://tuatarian.itch.io/puzzling-images">here</a>, I recommend you give it a go</p>
+
+            <p style="padding-top: 3rem;">I also made a short video about the game, which you can find <a href="https://youtu.be/gJDJl3h5Dik">here</a>
+
+            <p style="padding-top: 3rem">The source code for the game is available <a href="https://github.com/Tuatarian/image_puzzle">here</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+<style>
+
+h1 {
+    font-size: 350%;
+}
+
+a {
+    color: #EEEEEE;
+}
+
+img {
+    border: 5px solid #EEEEEE;
+}
+
+p {
+    font-size: 110%;
+}
+</style>
