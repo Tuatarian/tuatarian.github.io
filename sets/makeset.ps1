@@ -2,11 +2,19 @@ $urls = "https://lh3.googleusercontent.com/iecdsx8DH5VOWqqqVHB90cvu33yRxPet-Dudj
 $outs = "(c) Antonio Salazar de Oliveira.png", "(a) Washington Crossing the Delaware.png", "(b) Suleiman's Onion Hat.png"
 $setname = "Washington, Suleiman, Salazar(4,3,2022)"
 
+rm -Recurse $setname
+rm -Recurse "$setname.zip"
+
+rm "../fname"
+ft > ../fname.txt
+Set-Content "../fname.txt" $setname
+
 mkdir $setname
 foreach ($i in 0..($urls.Count-1)) {
 	Invoke-WebRequest -Uri $urls[$i] -OutFile $outs[$i]
 	mv $outs[$i] $setname
 }
-mv imdat.txt $setname
+cp imdat.txt $setname
 
 Compress-Archive "$setname/*" "$setname.zip"
+rm -Recurse $setname
