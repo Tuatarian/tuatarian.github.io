@@ -9,10 +9,10 @@ rm "./files.txt"
 rm "./fname.txt"
 ft > "./fname.txt"
 ft > "./files.txt"
-Set-Content "./files.txt" "$setname&!&"
+Set-Content "./files.txt" "$setname"
 foreach ($i in 0..($urls.Count - 1)) {
-	Add-Content "./files.txt" "$($urls[$i])&!&"
-	Add-Content "./fname.txt" "$($outs[$i])&!&"
+	Add-Content "./files.txt" "$($urls[$i])"
+	Add-Content "./fname.txt" "$($outs[$i])"
 }
 
 mkdir $setname
