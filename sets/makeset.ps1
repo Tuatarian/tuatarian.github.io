@@ -6,13 +6,13 @@ rm -Recurse $setname
 rm -Recurse "$setname.zip"
 
 rm "./files.txt"
-rm "./fname.txt"
-ft > "./fname.txt"
+rm "./fnames.txt"
+ft > "./fnames.txt"
 ft > "./files.txt"
 Set-Content "./files.txt" "$setname"
 foreach ($i in 0..($urls.Count - 1)) {
 	Add-Content "./files.txt" "$($urls[$i])"
-	Add-Content "./fname.txt" "$($outs[$i])"
+	Add-Content "./fnames.txt" "$($outs[$i])"
 }
 
 mkdir $setname
