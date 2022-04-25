@@ -1,6 +1,6 @@
-$urls = "https://lh3.googleusercontent.com/iecdsx8DH5VOWqqqVHB90cvu33yRxPet-DudjK3oySM3kOyvG30cZtYnDPBfxZphXg=s1200", "https://img.apmcdn.org/b0bac40848aac153d41caf45e2945d9b8e574b42/uncropped/6702c3-20150323-washington.jpg", "https://zantana.net/static/81f748bfb715775c0a798496b37e9ff7/38f6f/suleiman_i_sultan_of_the_ottoman_empire.jpg"
-$outs = "(b) Antonio Salazar de Oliveira.png", "(a) Washington Crossing the Delaware.png", "(c) Suleiman's Onion Hat.png"
-$setname = "(2022,04,15) Washington, Suleiman, Salazar"
+$urls = "https://www.mountainfilm.org/files/styles/large_16x9/public/images/films/MF15-STILL-Cerro%20Torre4.jpg?itok=tMZPrH2A", "https://www.adventurealternative.com/media/817366/khan-tengri-bc-on-north-inylchek-glacier.jpg", "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/25/58/3f.jpg"
+$outs = "(c) Cerro Torre.png", "(b) Khan Tengri.png", "(a) Mount Kenya.png"
+$setname = "(2022,04,24) The Not-8000ers"
 
 rm -Recurse "fname.txt"
 rm -Recurse "$setname.zip"
