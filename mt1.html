@@ -14,13 +14,29 @@
     <h1> Sep 16 Meeting </h1>
     <h3> "Ramanujan's Easiest Formula" Proposed by S. Ramanujan to the Journal of the Indian Mathematical Society in 1914. (Found via John Carlos Baez) </h2>
     <p>
-        Prove that
-        \[ \Biggl (\frac{1}{1} + \frac{1}{1 \cdot 3} + \frac{1}{1 \cdot 3 \cdot 5} + \dots \Biggr ) + \frac{1}{1 + \frac{1}{ 1 + \frac{2}{1 + \frac{3}{1 + \frac{4}{1 + \frac{5}{1 + \dots}}}}}} = \sqrt{\frac{\pi e}{2}} \]
+  
+    Prove that
+    \[ \Biggl (\frac{1}{1} + \frac{1}{1 \cdot 3} + \frac{1}{1 \cdot 3 \cdot 5} + \dots \Biggr ) + \frac{1}{1 + \frac{1}{ 1 + \frac{2}{1 + \frac{3}{1 + \frac{4}{1 + \frac{5}{1 + \dots}}}}}} = \sqrt{\frac{\pi e}{2}} \]
 
-	<u>Hints</u>: Try writing the sum as as a taylor series, in partiuclar, try setting up a differential equation for \( \frac{x}{1} + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} \dots \) and solving for \(f(x)\)<br>
+	<u>Hints:</u>: Try writing the sum as as a taylor series, in partiuclar, try setting up a differential equation for \( \frac{x}{1} + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} \dots \) and solving for \(f(x)\)<br>
 	For the continued fraction, I kinda don't understand what we did there tbh<br><br>
 
-	<u>Solution:</u> <i>writeup here</i>
+	<u>Solution:</u> Let \(f(x) = x + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} + \dots \). Then \(f'(x) = 1 + \frac{x^2}{1} + \frac{x^4}{1 \cdot 3} + \frac{x^6}{1 \cdot 3 \cdot 5} = xf(x) + 1, f(0) = 0\). This differential equation can be solved (using either integrating factors or WolframAlpha) to yield
+	
+	\[ f(x) = \sqrt{\frac{\pi}{2}}e^{\frac{x^2}{2}}\text{erf} \Biggl (\frac{x}{\sqrt{2}} \Biggr ) \]
+
+	where
+
+	\[ \text{erf}(x) = \frac{2}{\sqrt{\pi}} \int^{x}_0 e^{-t^2} dt \]
+
+	
+	though the actual value of erf is not hugely relevant. This is convenient, as \( \sqrt{\pi e} \) shows up when \( x = 1 \), which retrieves the original sum!<br><br>
+
+	Next, we work on the continued fraction. We want to define a function \( g(x) \) such that \( g(1) = \frac{1}{1 + \frac{1}{ 1 + \frac{2}{1 + \frac{3}{1 + \frac{4}{1 + \frac{5}{1 + \dots}}}}}} \) and \( g(x) \) satisfies
+	\[ g(x) = \sqrt{\frac{\pi}{2}}e^{\frac{x^2}{2}} \Biggl( 1 - \text{erf} \Biggl( \frac{x}{\sqrt{2}} \Biggr) \Biggr) \]
+
+	Since then \( f(x) + g(x) = \sqrt{\frac{\pi e}{2}} \)
+	
     </p>
 </body>
 
