@@ -22,7 +22,7 @@
 	<h2> Sep 30, 2023 Meeting </h2>
 	<h3> Putnam 2000 A2 </h3>
 	<p> Given any five points on a sphere, show that some four of them must lie on a closed hemisphere<br><br>
-	  </p><p style="color: #444"><u style="color: #EEE">Hint:</u> There is a one-line proof of this<br><br></p><p>
+	  </p><p style="color: #333"><u style="color: #EEE">Hint:</u> There is a one-line proof of this<br><br></p><p>
 	  <u>Solution:</u> Cut the circle into two hemispheres meeting at the plane defined by the center of the sphere and any two of the five points.
 	  By pigeonhole, at least one of these two hemispheres must contain two of the three remaining points, and so we are done.<br><br>
 	</p>
@@ -30,7 +30,7 @@
 	<h3> Putnam 2002 A4 </h3>
 	<p> Two players play a game on a 3 x 3 board. The first player places a 1 on an empty square and the second player places a 0 on an empty square. Play continues until all squares are occupied. The second player wins if the resulting determinant is 0 and the first player wins if it has any other value. Who wins?<br>
 	  Just to make things easier, call the first player (who places 1s) Player 1, and the second player (who places 0s) Player 0.<br><br>
-	</p><p style="color: #444"> <u style="color: #EEE">Hints:</u> Player 0 wins<br><br>Show that two columns of the matrix cannot sum to another<br><br></p><p>
+	</p><p style="color: #333"> <u style="color: #EEE">Hints:</u> Player 0 wins<br><br>Show that two columns of the matrix cannot sum to another<br><br></p><p>
 	  <u>Solution:</u> First, we show that no two rows can sum to another. Note that there are exactly 5 1s and 4 0s in the matrix at the end of the game. However, if the matrix had the form
 
 	  \[
@@ -66,7 +66,7 @@
 	<h3>2020 AIME II Problem 3 (TFP)</h3>
 	<p>Let \(P(x) = x^2 - 3x - 7\), and let \(Q(x)\) and \(R(x)\) be two quadratic polynomials with the coefficient of \(x^2\) equal to \(1\). David computes each of the three sums \(P + Q, P + R, Q + R\), and is surprised to find that each pair of sums has a common root, and these three common roots are distinct. If \(Q(0) = 2\), then \(R(0) = \frac{m}{n}\), where \(m\) and \(n\) are relatively prime integers. Find \(m + n\).</p><br><br>
 
-	<p style="color: #444"><u style="color: #EEE">Hint:</u> TFP!</p>
+	<p style="color: #333"><u style="color: #EEE">Hint:</u> TFP!</p>
 	
 	<h3>44th International Tournament of Towns, Senior A-level Paper, Problem 4</h3>
 	<p>A regular \(100\)-gon is dissected into some number of parallelograms and two triangles. Prove that these triangles are equal.</p><br><br>
@@ -74,8 +74,29 @@
 	<p><u>Solution:</u> Did not solve</p><br>
 
 	<h3>Sage's car cluster problem</h3>
-	<p>There are \(n\) cars moving forward on a track. The speed of each car is sampled randomly, say from \[0, 1\]. When a faster car approaches a slower car, the faster car must slow down to match the speed of the slower car, forming a "cluster" of two cars. Similarly, if \(c_1\) is faster than \(c_2\) and \(c_2\) is faster than \(c_3\), the cars \(c_1, c_2, c_3\) will form a cluster of three cars (assuming that \(c_1, c_2, c_3\) are consecutive cars). Cars never speed up, only slow down.</p>
-	
+	<p>There are \(n\) cars moving forward on a track. The speed of each car is sampled randomly, say from \([0, 1]\). When a faster car approaches a slower car, the faster car must slow down to match the speed of the slower car, forming a "cluster" of two cars. Similarly, if \(c_1\) is faster than \(c_2\) and \(c_2\) is faster than \(c_3\), the cars \(c_1, c_2, c_3\) will form a cluster of three cars (assuming that \(c_1, c_2, c_3\) are consecutive cars). Cars never speed up, only slow down. Given \(n\) cars on the track, what is the expected number of clusters \(X\)?</p>
+
+	<p style="color: #333"><u style="color: #EEE">Hint:</u> Consider the probability that any given car is at the front of a cluster and then use linearity of expectation.</p>
+
+	<p><u>Solution:</u> Note that a car is at the front of a cluster iff it is slower than every car in front of it. This occurs with probability \(\frac{1}{k}\), where \(k\) is the number of cars in front of our particular car. By linearity of expectation
+
+	  \[
+	      E[X] = \sum_{k = 0}^n \frac{1}{n - k} = \sum_{k = 0}^n \frac{1}{k}
+	  \]
+
+	  which is the \(n\)-th harmonic number and cannot be simplified.<br><br>
+
+	  We also solved a slightly harder variant of the problem in which singleton cars are not considered clusters. A car \(C_i\) is a singleton cluster iff it is slower than every car after it AND faster than the car immediately before it. This is equivalent to saying that if we consider the set of cars \(\{C_{i - 1}, \dots, C_n\}\), the slowest should be \(C_{i - 1}\), and the second slowest should be \(C_i\), which occurs with probability \(\frac{1}{k(k - 1)}\). Thus, for this variant.
+
+	  \[
+	      E[X] = \sum_{k = 0}^n \frac{1}{k(k - 1)}
+	  \]
+
+	Which is also intractable.
+
+	</p>
+
+	  
 	</div>
 	<div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">  
 	  <h2> Sep 16, 2023 Meeting </h2>
@@ -85,7 +106,7 @@
 	  Prove that
 	  \[ \Biggl (\frac{1}{1} + \frac{1}{1 \cdot 3} + \frac{1}{1 \cdot 3 \cdot 5} + \dots \Biggr ) + \frac{1}{1 + \frac{1}{ 1 + \frac{2}{1 + \frac{3}{1 + \frac{4}{1 + \frac{5}{1 + \dots}}}}}} = \sqrt{\frac{\pi e}{2}} \]
 
-	  </p><p style="color: #444"> <u style="color: #EEE">Hints:</u> Try writing the sum as as a taylor series, in partiuclar, try setting up a differential equation for \( \frac{x}{1} + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} \dots \) and solving for \(f(x)\)<br></p><p>
+	  </p><p style="color: #333"> <u style="color: #EEE">Hints:</u> Try writing the sum as as a taylor series, in partiuclar, try setting up a differential equation for \( \frac{x}{1} + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} \dots \) and solving for \(f(x)\)<br></p><p>
 	  For the continued fraction, I kinda don't understand what we did there tbh<br><br>
 
 	  <u>Solution:</u> Let \(f(x) = x + \frac{x^3}{1 \cdot 3} + \frac{x^5}{1 \cdot 3 \cdot 5} + \dots \). Then \(f'(x) = 1 + \frac{x^2}{1} + \frac{x^4}{1 \cdot 3} + \frac{x^6}{1 \cdot 3 \cdot 5} = xf(x) + 1, f(0) = 0\). This differential equation can be solved (using either integrating factors or WolframAlpha) to yield
