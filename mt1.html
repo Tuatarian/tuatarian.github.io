@@ -81,7 +81,7 @@
 	<p><u>Solution:</u> Note that a car is at the front of a cluster iff it is slower than every car in front of it. This occurs with probability \(\frac{1}{k}\), where \(k\) is the number of cars in front of our particular car. By linearity of expectation
 
 	  \[
-	      E[X] = \sum_{k = 0}^n \frac{1}{n - k} = \sum_{k = 0}^n \frac{1}{k}
+	      E[X] = \sum_{k = 1}^n \frac{1}{n - k} = \sum_{k = 0}^n \frac{1}{k}
 	  \]
 
 	  which is the \(n\)-th harmonic number and cannot be simplified.<br><br>
@@ -89,7 +89,7 @@
 	  We also solved a slightly harder variant of the problem in which singleton cars are not considered clusters. A car \(C_i\) is a singleton cluster iff it is slower than every car after it AND faster than the car immediately before it. This is equivalent to saying that if we consider the set of cars \(\{C_{i - 1}, \dots, C_n\}\), the slowest should be \(C_{i - 1}\), and the second slowest should be \(C_i\), which occurs with probability \(\frac{1}{k(k - 1)}\). Thus, for this variant.
 
 	  \[
-	      E[X] = \sum_{k = 0}^n \frac{1}{k(k - 1)}
+	      E[X_1] = \sum_{k = 1}^n \frac{1}{k} - \frac{1}{n} - \sum_{k = 2}^n \frac{1}{k(k - 1)} = -1 + \sum_{k = 1}^n \frac{1}{k}
 	  \]
 
 	Which is also intractable.
