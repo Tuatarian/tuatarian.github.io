@@ -1,117 +1,166 @@
 <!DOCTYPE html>
 <html style="font-family: 'Roboto', sans-serif;">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Opinions</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  </head>
-      <header style="background-color: #111111; color : #EEEEEE; font-family: Quicksand, sans-serif;">
-        <div style="display: flex; justify-content: center; padding-top: 1%;">
-            <a href="index.html" target="_self"><h1>Tuatarian.app</h1></a>
-        </div>
-        <div style="display: flex; justify-content: center; align-items: center; margin: 0% 32%;">
-            <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="https://tuatarian.itch.io">Itch</a></p>
-            <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">Articles</a></p>
-            <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">About</a></p>
-            <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">Links</a></p>
-        </div>
-    </header>   
-  <body style="background-color: #111111; color: #EEEEEE; font-weight: 300; padding-bottom: 20px;">
-    <div style="padding: 0rem 12rem;">
-      <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-        <div id="op6">
-	  <h2>Opinion 7: God having \(O(1)\) query-omnescience would pose a contradiction (assuming there are computations which take at least \(\omega(1)\))</h2>
-	</div>
-	<p>
-	  Imagine God were \(O(f(n))\) query omnescient in the form that ge could query any piece of information in \(O(f(n))\). Imagine there is a computation that times minimum time \(g(n) = \omega(f(n))\) to complete. Then ge could begin the action, and then query the answer from the future in \( O(f(n)) = o(g(n))) \) time, which is clearly a contradiction.
-	</p>
-      </div>
-        <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-        <div id="op6">
-	  <h2>Opinion 6: While some may complain about the lack of "real" opinions on this website, they are not present because I have not had them between the site's creation and now, and anyway they are not something to be forced. However, I should probably write more in each opinion that I post.</h2>
-	</div>
-	<p>
-	  However, I will not choose this opinion to begin writing more. Perhaps the next.
-	</p>
-      </div>
-      <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-        <div id="op5">
-	  <h2>Opinion 5: It is better to be a nice person than to be a mean person, for various reasons</h2>
-	</div>
-	<p>
-	  Intriguingly, this is not a fact, but a true opinion. The notion that opinions can also be facts is first referenced in <a href="#op1">Opinion 1</a> and demonstrated in <a href="#op2">Opinion 2</a>
-	</p>
-      </div>
-      <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-        <div id="op4">
-	  <h2>Opinion 4: It is acceptable but not preferable to host an opinion page that is not linked to on the landing page of one's website</h2>
-	</div>
-	<p>
-	  While by <a href="#op1">Opinion 1</a> it is worthwhile to compile such a page of opinions, it is also preferable to display them in a location where they can be found by others, such that they can discover the opinions that you have held. However, if one is uncomfortable doing this, the option of creating an opinions page that is not linked to from one's main site, but can be accessed by those who are aware of its existence is preferable to the option of not creating one at all.
-	</p>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Opinions</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet">
+</head>
+<header style="background-color: #111111; color : #EEEEEE; font-family: Quicksand, sans-serif;">
+  <div style="display: flex; justify-content: center; padding-top: 1%;">
+    <a href="index.html" target="_self">
+      <h1>Tuatarian.app</h1>
+    </a>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; margin: 0% 32%;">
+    <p style="text-align: center; flex: 1;"><a style="text-decoration: underline"
+        href="https://tuatarian.itch.io">Itch</a></p>
+    <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">Articles</a></p>
+    <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">About</a></p>
+    <p style="text-align: center; flex: 1;"><a style="text-decoration: underline" href="#">Links</a></p>
+  </div>
+</header>
+
+<body style="background-color: #111111; color: #EEEEEE; font-weight: 300; padding-bottom: 20px;">
+  <div style="padding: 0rem 12rem;">
     <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-        <div id="op3">
-	  <h2>Opinion 3: While it would have been fantastic if I had started this website earlier, the best time to start between now and the end of time is now</h2>
-	</div>
-	<p>
-	  This is an example of an opinion which is not a fact, but truly an opinion. This is an extension of <a href="#op1">Opinion 1: It is annoying but worthwhile to list every opinion one has ever had on a website similar to this one</a>
-	</p>
-    </div>
-          <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-	<div id="op2">
-	  <h2>Opinion 2: California is the greatest State</h2>
-	</div>
-	<p>
-	  Please note that I do not discriminate between different definitons of state, nor do I specify a nation in which the state should be located. This claim is highly general. As observed in <a href="#op1">Opinion 1</a>, this is a fact, despite being labelled as an opinion.
-	</p>
-	  </div>
-	        <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
-	<div id="op1">
-	  <h2>Opinion 1: It is annoying but worthwhile to list every opinion one has ever had on a website similar to this one</h2>
-	</div>
-	<p>
-	  This opinion website would not exist without the great <a href="https://sites.math.rutgers.edu/~zeilberg/OPINIONS.html">opinion website</a> of Doron Zeilberger. I will only sometimes be providing justifications for my opinions. I will also be occasionally stating facts and not opinions, though I may label them as opinions anyway (for an example, see <a href="#op2">Opinion 2: California is the greatest State</a>).
-	</p>
-	</div>
+      <div id="op9">
+        <h2>Opinion 9: It is not obvious whether <a href='#op8'>Opinion 8</a> is an opinion or a fact</h2>
       </div>
+      <p>
+        If it were a fact, however, it would stll have its place on this page, as observed in <a href="#op1">Opinion 1</a>
+      </p>
     </div>
-  </body>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op8">
+        <h2>Opinion 8: Flooding is more interesting viewing than Jayne's textbook on probability theory</h2>
+      </div>
+      <p>
+        This opinion is stated somewhat generally, but specifically refers to flooding occuring in and around Yellowstone National Park. In particular, if one has the opportunity to decide between viewing floods at Yellowstone and reading Jayne's, viewing the floods would be a superior choice.
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op7">
+        <h2>Opinion 7: God having \(O(1)\) query-omnescience would pose a contradiction (assuming there are computations
+          which take at least \(\omega(1)\))</h2>
+      </div>
+      <p>
+        Imagine God were \(O(f(n))\) query omnescient in the form that ge could query any piece of information in
+        \(O(f(n))\). Imagine there is a computation that times minimum time \(g(n) = \omega(f(n))\) to complete. Then ge
+        could begin the action, and then query the answer from the future in \( O(f(n)) = o(g(n))) \) time, which is
+        clearly a contradiction.
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op6">
+        <h2>Opinion 6: While some may complain about the lack of "real" opinions on this website, they are not present
+          because I have not had them between the site's creation and now, and anyway they are not something to be
+          forced. However, I should probably write more in each opinion that I post.</h2>
+      </div>
+      <p>
+        However, I will not choose this opinion to begin writing more. Perhaps the next.
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op5">
+        <h2>Opinion 5: It is better to be a nice person than to be a mean person, for various reasons</h2>
+      </div>
+      <p>
+        Intriguingly, this is not a fact, but a true opinion. The notion that opinions can also be facts is first
+        referenced in <a href="#op1">Opinion 1</a> and demonstrated in <a href="#op2">Opinion 2</a>
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op4">
+        <h2>Opinion 4: It is acceptable but not preferable to host an opinion page that is not linked to on the landing
+          page of one's website</h2>
+      </div>
+      <p>
+        While by <a href="#op1">Opinion 1</a> it is worthwhile to compile such a page of opinions, it is also preferable
+        to display them in a location where they can be found by others, such that they can discover the opinions that
+        you have held. However, if one is uncomfortable doing this, the option of creating an opinions page that is not
+        linked to from one's main site, but can be accessed by those who are aware of its existence is preferable to the
+        option of not creating one at all.
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op3">
+        <h2>Opinion 3: While it would have been fantastic if I had started this website earlier, the best time to start
+          between now and the end of time is now</h2>
+      </div>
+      <p>
+        This is an example of an opinion which is not a fact, but truly an opinion. This is an extension of <a
+          href="#op1">Opinion 1: It is annoying but worthwhile to list every opinion one has ever had on a website
+          similar to this one</a>
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op2">
+        <h2>Opinion 2: California is the greatest State</h2>
+      </div>
+      <p>
+        Please note that I do not discriminate between different definitons of state, nor do I specify a nation in which
+        the state should be located. This claim is highly general. As observed in <a href="#op1">Opinion 1</a>, this is
+        a fact, despite being labelled as an opinion.
+      </p>
+    </div>
+    <div style="padding: 0rem 3rem; padding-bottom: 1rem; background-color: #222222;">
+      <div id="op1">
+        <h2>Opinion 1: It is annoying but worthwhile to list every opinion one has ever had on a website similar to this
+          one</h2>
+      </div>
+      <p>
+        This opinion website would not exist without the great <a
+          href="https://sites.math.rutgers.edu/~zeilberg/OPINIONS.html">opinion website</a> of Doron Zeilberger. I will
+        only sometimes be providing justifications for my opinions. I will also be occasionally stating facts and not
+        opinions, though I may label them as opinions anyway (for an example, see <a href="#op2">Opinion 2: California
+          is the greatest State</a>).
+      </p>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
 
 <style>
   h1 {
-      font-size: 350%;
+    font-size: 350%;
   }
 
   a {
-      color: #EEEEEE;
+    color: #EEEEEE;
   }
 
   p {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   h2 {
-      text-align: center; padding-top: 2%; font-size: 2.5rem; font-family: Quicksand, sans-serif;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 2.5rem;
+    font-family: Quicksand, sans-serif;
   }
 
   h3 {
-      text-align: center; padding-top: 1%; font-size: 1.25rem; font-family: Quicksand, sans-serif;
+    text-align: center;
+    padding-top: 1%;
+    font-size: 1.25rem;
+    font-family: Quicksand, sans-serif;
   }
 
   hint {
-      color #121212;
+    color #121212;
   }
-      
 </style>
